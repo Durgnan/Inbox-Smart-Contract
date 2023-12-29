@@ -1,0 +1,2 @@
+exports.MNEMONIC = 'YOUR_MNEMONIC'
+exports.INFURA_URL = 'YOUR_INFURA_URL';
