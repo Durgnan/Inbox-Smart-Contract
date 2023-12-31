@@ -16,7 +16,8 @@ beforeEach(async () => {
     // Get a list of all accounts 
     accounts = await web3.eth.getAccounts()
     // Use one of those accounts to deploy contracts 
-    inbox = await new web3.eth.Contract(JSON.parse(abi))
+    console.log(JSON.parse(JSON.stringify(abi)));
+    inbox = await new web3.eth.Contract(JSON.parse(JSON.stringify(abi)))
         .deploy({ data: evm.bytecode.object, arguments: [INITIAL_STRING]})
         .send({ from: accounts[0], gas: '1000000'})
 })
